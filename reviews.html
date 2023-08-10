@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reviews</title>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 32px;
+            letter-spacing: 2px;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: #fff;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 1;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        /* New styles for alignment */
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        #review-form {
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+            margin-top: 1rem;
+        }
+
+        #review-form label,
+        #review-form input,
+        #review-form textarea,
+        #review-form select {
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        #review-form input,
+        #review-form textarea,
+        #review-form select {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #review-form input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>User Reviews</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./info.html">Info</a></li>
+            <li><a href="./reviews.html">Reviews</a></li>
+            <li><a href="./about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Player Reviews</h2>
+        <div id="review-cards">
+            <div id="reviews-container"></div>
+            <!-- Review cards will be generated dynamically -->
+        </div>
+
+        <h3>Add Your Own Review</h3>
+        <form id="review-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="rating">Rating (1-5):</label>
+            <input type="number" id="rating" name="rating" min="1" max="5" required>
+
+            <label for="review">Review:</label>
+            <textarea id="review" name="review" rows="4" cols="50" required></textarea>
+
+            <input type="submit" value="Create">
+        </form>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 YourName. All rights reserved.</p>
+    </footer>
+    
+    <script src="js/data.js"></script> 
+    <script src="js/script.js"></script>
+</body>
+</html>
